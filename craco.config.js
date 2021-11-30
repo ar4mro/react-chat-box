@@ -7,6 +7,17 @@ module.exports = {
       "@assets": path.resolve(__dirname, "src/assets"),
       "@components": path.resolve(__dirname, "src/components"),
     },
+    configure: {
+      module: {
+        rules: [
+          {
+            type: "javascript/auto",
+            test: /\.mjs$/,
+            include: /node_modules/,
+          },
+        ],
+      },
+    },
   },
   style: {
     postcss: {
